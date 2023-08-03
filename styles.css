@@ -3,6 +3,9 @@
     padding: 0;
 }
 
+body {
+    background-color: black;
+}
 .main {
     width: 100vw;
     height: 100vh;
@@ -26,7 +29,20 @@
 .credit {
     font-family: 'Montserrat', sans-serif;
     font-size: 30px;
+    color: white;
+    text-decoration: none;
+
 }
+
+.credit:hover {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+}
+
+.credit a {
+    /* color: white; */
+
+}
+
 
 .rules-container {
     margin-top: 3em;
@@ -41,6 +57,7 @@
     border-radius: 10px;
     text-align: center;
     border: 2px solid rgb(43, 41, 41);
+    box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.2)
 }
 
 .rules1 {
@@ -49,15 +66,34 @@
 
 .rules2 {
     font-size: 25px;
-    margin-bottom: 5px;
 }
 
 .footer {
     font-size: 15px;
-    position: absolute;
-    bottom: 0;
     padding: 5px 0;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
-    width: 100vw;
+    color: white;
+    background-color: rgb(14, 13, 13);
+}
+
+#btn {
+    margin-top: 5px;
+    background: none;
+    border: 2px solid white;
+    padding: 10px 25px;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+    box-shadow: 0 0 10px 2px rgba(148, 148, 148, 0.6)
+}
+
+#btn:hover {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+
+#btn:active {
+    background-color: rgb(189, 188, 188);
 }
