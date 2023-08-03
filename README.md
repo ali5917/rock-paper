@@ -1,1 +1,1 @@
-# rock-paper
+This is a ROCK PAPER SCISSOR game in JS. It is a part of The Odin Project!
