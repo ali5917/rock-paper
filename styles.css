@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -23,12 +24,12 @@ body {
     text-align: center;
     font-family: 'Montserrat', sans-serif;
     font-weight: 800;
-    font-size: 70px;
+    font-size: 80px;
 }
 
 .credit {
     font-family: 'Montserrat', sans-serif;
-    font-size: 30px;
+    font-size: 35px;
     color: white;
     text-decoration: none;
 
@@ -37,12 +38,6 @@ body {
 .credit:hover {
     text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
 }
-
-.credit a {
-    /* color: white; */
-
-}
-
 
 .rules-container {
     margin-top: 3em;
@@ -78,22 +73,38 @@ body {
 }
 
 #btn {
-    margin-top: 5px;
+    margin-top: 100px;
     background: none;
     border: 2px solid white;
     padding: 10px 25px;
     color: white;
     font-family: 'Montserrat', sans-serif;
     font-size: 22px;
-    box-shadow: 0 0 10px 2px rgba(148, 148, 148, 0.6)
+    box-shadow: 0 0 10px 2px rgba(148, 148, 148, 0.6);
+    transition: all 0.3s ease;
 }
 
 #btn:hover {
     background-color: white;
     color: black;
     cursor: pointer;
+    transform: scale(1.2);
 }
 
 #btn:active {
     background-color: rgb(189, 188, 188);
+}
+
+#btn {
+    color: white;
+    text-decoration: none;
+}
+
+#game-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    background-color: red;
+    width: 100vw;
+    height: 100vh;
 }
