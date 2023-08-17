@@ -39,39 +39,6 @@ body {
     text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
 }
 
-.rules-container {
-    margin-top: 3em;
-    font-family: 'Montserrat', sans-serif;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(24, 23, 23);
-    padding: 1rem 5%;
-    gap: 1em;
-    border-radius: 10px;
-    text-align: center;
-    border: 2px solid rgb(43, 41, 41);
-    box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.2)
-}
-
-.rules1 {
-    font-size: 30px;
-}
-
-.rules2 {
-    font-size: 25px;
-}
-
-.footer {
-    font-size: 15px;
-    padding: 5px 0;
-    text-align: center;
-    font-family: 'Montserrat', sans-serif;
-    color: white;
-    background-color: rgb(14, 13, 13);
-}
-
 #btn {
     margin-top: 100px;
     background: none;
@@ -101,10 +68,105 @@ body {
 }
 
 #game-container {
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
-    background-color: red;
+    background-color: rgb(15, 15, 10);
     width: 100vw;
-    height: 100vh;
+    height: auto;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    padding: 10px 0px;
+}
+
+.prompt {
+    font-size: 45px;
+    text-align: center;
+}
+
+.choices-container {
+    display: flex;
+    gap: 2em;
+    justify-content: center;
+    margin-top: 1em;
+}
+
+.choices-container img {
+    width: 90px;
+    height: 90px;
+    background: none;
+    border: none;
+    object-fit: cover;
+}
+
+.choices-container button {
+    /* background: black; */
+    background-color: rgb(17, 17, 6);
+    border-radius: 50%;
+    width: 110px;
+    height: 110px;
+    /* border: solid white 2px; */
+    border: solid rgb(228, 228, 127) 1px;
+    transition: all 0.3s ease;    
+}
+
+.choices-container button:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+    box-shadow: 0 0 15px 3px rgba(228, 228, 127, 0.2)
+}
+
+.game-scn {
+    display: flex;
+    justify-content: center;
+    margin-top: 2em;
+    gap: 1em;
+    text-align: center;
+    align-items: center;
+}
+
+.game-scn img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: white solid 2px;
+    background-color: rgb(17, 17, 6);
+}
+
+.score {
+    width: 70px;
+    /* border: solid 1px white; */
+    border: solid rgb(228, 228, 127) 1px;
+    font-size: 50px;
+    border-radius: 3px;
+    /* background-color: black; */
+    background-color: rgb(17, 17, 6);
+}
+
+.choice p{
+    font-size: 25px;
+    margin-top: 10px;
+}
+
+.p-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.progress {
+    font-size: 40px;
+    text-align: center;
+    /* background-color: rgb(22, 22, 22); */
+    background-color: rgb(17, 17, 6);
+    width: 50%;
+    border-radius: 5px;
+    border: solid rgb(228, 228, 127) 1px;
+    /* border: solid 1px white; */
+}
+
+.footer {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    text-align: center;
+    padding: 5px 0px;
 }

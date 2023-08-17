@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissor</title>
     <link rel="stylesheet" href="./styles.css">
-    <script src="newgame.js"></script>
     <link rel="icon" href="./icons/favicon1.png" type="image/png">
 
     <!-- fonts -->
@@ -25,15 +24,36 @@
     </div>
 
     <div id="game-container">
-        
+        <p class="prompt">SELECT YOUR WEAPON WISELY</p>
+        <div class="choices-container">
+            <button class="rock"><img src="./icons/rock-white.png" alt="Rock"></button>
+            <button class="paper"><img src="./icons/paper-white.png" alt="paper"></button>
+            <button class="scissor"><img src="./icons/scissor-white.png" alt="scissor"></button>
+        </div>
+        <div class="game-scn">
+            <div class="u score" style="margin-right: 30px;"><p>0</p></div>
+            <div class="u choice">
+                <img src="./icons/default.png" class="u-choice">
+                <p>You</p>
+            </div>
+            <div class="c choice">
+                <img src="./icons/default.png" class="c-choice">
+                <p>AI</p>
+            </div>
+            <div class="c score" style="margin-left: 30px;"><p>0</p></div>
+        </div>
+
+        <div class="p-container">
+            <p class=progress>LETSSSS GO!</p>
+        </div>
+
     </div>
-
-
-
 
     <div class="footer">
         <p>Copyright &copy Ali &middot The Odin Project 2023</p>
     </div>
+
+    <script src="newgame.js"></script>
 </body>
 </html>
 
