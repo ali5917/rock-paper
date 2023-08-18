@@ -153,6 +153,8 @@ function checkRestart() {
         finalResult.textContent = "LETSSSS GO!";
         userimg.src = './icons/default.png';
         compimg.src = './icons/default.png';
+        tinkAudio.currentTime = 0;
+        tinkAudio.play();
     })
 }
 
