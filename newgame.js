@@ -84,10 +84,10 @@ function game(userChoice) {
         if (roundnum > 5) {
             outcome = whowins();
             finalResult.textContent = outcome;
-            if (cScore > uScore) {
+            if (cScore.textContent > uScore.textContent) {
                 audio = document.querySelector('.game-lose')
             }
-            else if (uScore > cScore) {
+            else if (uScore.textContent > cScore.textContent) {
                 audio = document.querySelector('.game-win')
             }
             else {
