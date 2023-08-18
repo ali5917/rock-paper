@@ -9,7 +9,8 @@ const userimg = document.querySelector('.u-choice');
 const compimg = document.querySelector('.c-choice');
 const uScore = document.querySelector('.u.score');
 const cScore = document.querySelector('.c.score');
-finalResult = document.querySelector('.progress');
+const finalResult = document.querySelector('.progress');
+const restart = document.querySelector('.restart-btn');
 
 //global-variables
 let userChoice;
@@ -68,6 +69,7 @@ function round(userChoice, compChoice) {
 
 function game(userChoice) {
     compChoice = getComputerChoice();
+    checkRestart();
     if (roundnum <= 5) {
         thisround(userChoice);
         userimg.src = display(userChoice);
@@ -122,5 +124,15 @@ function whowins() {
         return "You LOST! Try Again."
     }
     else return "You WON! Congratulations."
+}
+
+function checkRestart() {
+    reset = restart.addEventListener('click', () => {
+        uScore.textContent = '0';
+        cScore.textContent = '0';
+        roundnum = 1;
+        prompt.textContent = "SELECT YOUR WEAPON WISELY";
+        finalResult.textContent = "LETSSSS GO!";
+    })
 }
 
