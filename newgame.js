@@ -151,6 +151,8 @@ function checkRestart() {
         roundnum = 1;
         prompt.textContent = "SELECT YOUR WEAPON WISELY";
         finalResult.textContent = "LETSSSS GO!";
+        userimg.src = './icons/default.png';
+        compimg.src = './icons/default.png';
     })
 }
 
