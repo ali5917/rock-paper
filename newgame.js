@@ -11,6 +11,7 @@ const uScore = document.querySelector('.u.score');
 const cScore = document.querySelector('.c.score');
 const finalResult = document.querySelector('.progress');
 const restart = document.querySelector('.restart-btn');
+const tinkAudio = document.querySelector('.tink');
 
 //global-variables
 let userChoice;
@@ -22,18 +23,24 @@ let winner;
 const rock = document.querySelector('.rock');
 rock.addEventListener('click', () => {
     userChoice = 'rock';
+    tinkAudio.currentTime = 0;
+    tinkAudio.play();
     game(userChoice);
 });
 
 const paper = document.querySelector(".paper");
 paper.addEventListener('click', () => {
     userChoice = 'paper';
+    tinkAudio.currentTime = 0;
+    tinkAudio.play();
     game(userChoice);
 });
 
 const scissor = document.querySelector(".scissor");
 scissor.addEventListener('click', () => {
     userChoice = 'scissor';
+    tinkAudio.currentTime = 0;
+    tinkAudio.play();
     game(userChoice);
 });
 
@@ -77,6 +84,17 @@ function game(userChoice) {
         if (roundnum > 5) {
             outcome = whowins();
             finalResult.textContent = outcome;
+            if (cScore > uScore) {
+                audio = document.querySelector('.game-lose')
+            }
+            else if (uScore > cScore) {
+                audio = document.querySelector('.game-win')
+            }
+            else {
+                audio = document.querySelector('.game-draw')
+            }
+            audio.currentTime = 0;
+            audio.play();
         }
         else{
             finalResult.textContent = "Game Started.....";
