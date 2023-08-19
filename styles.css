@@ -38,23 +38,28 @@ body {
 
 .head {
     text-align: center;
-    /* font-family: 'Montserrat', sans-serif; */
     font-family: 'Cinzel', serif;
     font-weight: 800;
     font-size: 90px;
+    transition: all ease 0.5s;
+}
+
+.head:hover {
+    text-shadow: 0 0 15px rgba(228, 228, 127, 0.8);
+    letter-spacing: 5px;
 }
 
 .credit {
-    /* font-family: 'Montserrat', sans-serif; */
     font-family: 'Cinzel', serif;
     font-size: 35px;
     color: white;
     text-decoration: none;
-
+    transition: all ease 0.5s;
 }
 
 .credit:hover {
-    text-shadow: 0 0 5px rgba(228, 228, 127, 0.8);
+    text-shadow: 0 0 15px rgba(228, 228, 127, 0.8);
+    letter-spacing: 5px;
 }
 
 #btn {
@@ -93,6 +98,12 @@ body {
     font-size: 45px;
     text-align: center;
     font-weight: 800;
+    transition: all ease 0.5s;
+}
+
+.prompt:hover {
+    text-shadow: 0 0 15px rgba(228, 228, 127, 0.8);
+    letter-spacing: 5px;
 }
 
 .choices-container {
@@ -221,6 +232,12 @@ body {
     font-weight: 800;
     color: white;
     text-align: center;
+    transition: all ease 0.5s;
+}
+
+#name-container p:hover {
+    text-shadow: 0 0 15px rgba(228, 228, 127, 0.8);
+    letter-spacing: 5px;
 }
 
 #name-container input {
@@ -272,11 +289,16 @@ body {
 
 #avatar-container p {
     text-align: center;
-    /* font-family: 'Montserrat', sans-serif; */
     font-family: 'Cinzel', serif;
     color: white;
     font-size: 70px;
     font-weight: 800;
+    transition: all ease 0.5s;
+}
+
+#avatar-container p:hover {
+    text-shadow: 0 0 15px rgba(228, 228, 127, 0.8);
+    letter-spacing: 5px;
 }
 
 .avatars {
