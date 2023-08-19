@@ -10,27 +10,36 @@ const tinkAudio = document.querySelector('.tink');
 const submitName = document.querySelector('.submit-name');
 const usrName = document.querySelector('.name-input');
 const usrAvatars = document.querySelectorAll('.avr-img');
+const uName = document.querySelector('.user-name');
+const whoosh = document.querySelector('.whoosh');
 
 //global-variables
 let userChoice;
 let compChoice;
 let roundnum = 1;
 let winner;
-let usrAvtrSrc;
+let usrAvtrSrc = './icons/user.png';
 
 function scrolltoname() {
     const target = document.getElementById('name-container');
     target.scrollIntoView();
+    whoosh.currentTime = 0.18;
+    whoosh.play();
+    
 }
 
 function scrolltoavatar() {
     const target = document.getElementById('avatar-container');
     target.scrollIntoView();
+    whoosh.currentTime = 0.18;
+    whoosh.play();
 }
 
 function scrolltogame() {
     const target = document.getElementById('game-container');
     target.scrollIntoView();
+    whoosh.currentTime = 0.18;
+    whoosh.play();
 }
 
 //checking which weapon selected
@@ -184,6 +193,7 @@ function checkRestart() {
 
 submitName.addEventListener('click', () => {
     const nameofusr = usrName.value;
+    uName.textContent = nameofusr.toUpperCase();
     scrolltoavatar();
 })
 
@@ -194,4 +204,8 @@ usrAvatars.forEach(function(e) {
         scrolltogame();
     })
 })
+
+const backMusic = document.querySelector('.bgm');
+backMusic.volume = 0.1; 
+
 

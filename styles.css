@@ -21,13 +21,15 @@ body {
 
 .head {
     text-align: center;
-    font-family: 'Montserrat', sans-serif;
+    /* font-family: 'Montserrat', sans-serif; */
+    font-family: 'Cinzel', serif;
     font-weight: 800;
     font-size: 90px;
 }
 
 .credit {
-    font-family: 'Montserrat', sans-serif;
+    /* font-family: 'Montserrat', sans-serif; */
+    font-family: 'Cinzel', serif;
     font-size: 35px;
     color: white;
     text-decoration: none;
@@ -70,6 +72,7 @@ body {
 }
 
 .prompt {
+    font-family: 'Cinzel', serif;
     font-size: 45px;
     text-align: center;
     font-weight: 800;
@@ -145,6 +148,7 @@ body {
 }
 
 .progress {
+    font-family: 'Cinzel', serif;
     font-size: 40px;
     text-align: center;
     background-color: rgb(17, 17, 6);
@@ -195,6 +199,7 @@ body {
 }
 
 #name-container p {
+    font-family: 'Cinzel', serif;
     font-size: 70px;
     font-weight: 800;
     color: white;
@@ -205,9 +210,10 @@ body {
     font-size: 50px;
     border: 2px solid black;
     border-radius: 8px;
-    color: grey;
+    color: rgb(128, 128, 1);
     border: solid 2px rgb(128, 128, 1);
     padding: 1px 15px;
+    font-family: 'Cinzel', serif;
 }
 
 #name-container input:focus {
@@ -249,7 +255,8 @@ body {
 
 #avatar-container p {
     text-align: center;
-    font-family: 'Montserrat', sans-serif;
+    /* font-family: 'Montserrat', sans-serif; */
+    font-family: 'Cinzel', serif;
     color: white;
     font-size: 70px;
     font-weight: 800;
