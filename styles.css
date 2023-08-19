@@ -80,6 +80,7 @@ body {
 .prompt {
     font-size: 45px;
     text-align: center;
+    font-weight: 800;
 }
 
 .choices-container {
@@ -192,6 +193,7 @@ body {
 .name-container {
     background-color: rgb(15, 15, 10);
     height: 100vh;
+    width: 100wh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -223,7 +225,56 @@ body {
     transition: all ease 0.2s;
 }
 
+.avatar-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2em;
+    padding-bottom: 10px;
+    background-color: rgb(15, 15, 10);
+}
 
+.avatar-container p {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-size: 70px;
+    font-weight: 800;
+}
 
+.avatars {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
 
+.avr-1 {
+    display: flex;
+    gap: 3em;
+}
+
+.avr-2 {
+    display: flex;
+    gap: 3em;
+}
+
+.avatar-container img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    padding: none;
+    transition: all ease 0.3s;
+    background-color: rgb(17, 17, 6);
+    border: solid rgb(228, 228, 127) 1px;
+}
+
+.avatar-container img:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+    box-shadow: 0 0 15px 3px rgba(228, 228, 127, 0.2);
+    border: solid rgb(228, 228, 127) 1px;
+}
 
