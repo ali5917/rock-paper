@@ -1,8 +1,3 @@
-function scrolltogame() {
-    const target = document.getElementById('game-container');
-    target.scrollIntoView();
-}
-
 //query-selections 
 const prompt = document.querySelector('.prompt');
 const userimg = document.querySelector('.u-choice');
@@ -12,12 +7,31 @@ const cScore = document.querySelector('.c.score');
 const finalResult = document.querySelector('.progress');
 const restart = document.querySelector('.restart-btn');
 const tinkAudio = document.querySelector('.tink');
+const submitName = document.querySelector('.submit-name');
+const usrName = document.querySelector('.name-input');
+const usrAvatars = document.querySelectorAll('.avr-img');
 
 //global-variables
 let userChoice;
 let compChoice;
 let roundnum = 1;
 let winner;
+let usrAvtrSrc;
+
+function scrolltoname() {
+    const target = document.getElementById('name-container');
+    target.scrollIntoView();
+}
+
+function scrolltoavatar() {
+    const target = document.getElementById('avatar-container');
+    target.scrollIntoView();
+}
+
+function scrolltogame() {
+    const target = document.getElementById('game-container');
+    target.scrollIntoView();
+}
 
 //checking which weapon selected
 const rock = document.querySelector('.rock');
@@ -159,7 +173,7 @@ function checkRestart() {
         roundnum = 1;
         prompt.textContent = "SELECT YOUR WEAPON WISELY";
         finalResult.textContent = "LETSSSS GO!";
-        userimg.src = './icons/user.png';
+        userimg.src = usrAvtrSrc;
         compimg.src = './icons/comp.png';
         userimg.style.boxShadow ="0 0 15px 3px rgba(228, 228, 127, 0.2)";
         compimg.style.boxShadow ="0 0 15px 3px rgba(228, 228, 127, 0.2)";
@@ -167,4 +181,17 @@ function checkRestart() {
         tinkAudio.play();
     })
 }
+
+submitName.addEventListener('click', () => {
+    const nameofusr = usrName.value;
+    scrolltoavatar();
+})
+
+usrAvatars.forEach(function(e) {
+    e.addEventListener('click', function(y) {
+        usrAvtrSrc = y.target.src;
+        userimg.src = usrAvtrSrc;
+        scrolltogame();
+    })
+})
 
