@@ -126,10 +126,18 @@ function thisround(userChoice) {
     winnerline.textContent = winner;
     prompt.appendChild(winnerline);
     if (winner.includes("You Won")) {
-        uScore.textContent++; 
+        uScore.textContent++;
+        userimg.style.boxShadow = "0 0 15px 3px rgb(7, 153, 7)";
+        compimg.style.boxShadow = "0 0 15px 3px rgb(219, 16, 16)";
     }
     else if (winner.includes("You Lost")) {
         cScore.textContent++;
+        compimg.style.boxShadow = "0 0 15px 3px rgb(7, 153, 7)";
+        userimg.style.boxShadow = "0 0 15px 3px rgb(219, 16, 16)";
+    }
+    else {
+        userimg.style.boxShadow ="0 0 15px 3px rgba(228, 228, 127, 0.2)";
+        compimg.style.boxShadow ="0 0 15px 3px rgba(228, 228, 127, 0.2)";
     }
     roundnum++;
 }
@@ -153,6 +161,8 @@ function checkRestart() {
         finalResult.textContent = "LETSSSS GO!";
         userimg.src = './icons/user.png';
         compimg.src = './icons/comp.png';
+        userimg.style.boxShadow ="0 0 15px 3px rgba(228, 228, 127, 0.2)";
+        compimg.style.boxShadow ="0 0 15px 3px rgba(228, 228, 127, 0.2)";
         tinkAudio.currentTime = 0;
         tinkAudio.play();
     })
