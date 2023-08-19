@@ -12,7 +12,6 @@ const cScore = document.querySelector('.c.score');
 const finalResult = document.querySelector('.progress');
 const restart = document.querySelector('.restart-btn');
 const tinkAudio = document.querySelector('.tink');
-tinkAudio.load();
 
 //global-variables
 let userChoice;
