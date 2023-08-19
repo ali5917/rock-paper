@@ -195,6 +195,9 @@ function checkRestart() {
 submitName.addEventListener('click', () => {
     const nameofusr = usrName.value;
     uName.textContent = nameofusr.toUpperCase();
+    if (uName.textContent === '') {
+        uName.textContent = 'YOU';
+    }
     scrolltoavatar();
 })
 
