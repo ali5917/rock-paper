@@ -19,6 +19,23 @@ body {
     color: white;
 }
 
+.nav {
+    position: fixed;
+    top: 10px;
+    left: 40px;
+}
+
+.nav img {
+    width: 80px;
+    height: 80px;
+    transition: all 0.3s ease;
+}
+
+.nav img:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
 .head {
     text-align: center;
     /* font-family: 'Montserrat', sans-serif; */

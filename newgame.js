@@ -12,6 +12,7 @@ const usrName = document.querySelector('.name-input');
 const usrAvatars = document.querySelectorAll('.avr-img');
 const uName = document.querySelector('.user-name');
 const whoosh = document.querySelector('.whoosh');
+const musicBtn = document.querySelector('.msc-btn');
 
 //global-variables
 let userChoice;
@@ -208,4 +209,15 @@ usrAvatars.forEach(function(e) {
 const backMusic = document.querySelector('.bgm');
 backMusic.volume = 0.1; 
 
+musicBtn.addEventListener('click', () => {
+    const btnSrc = musicBtn.getAttribute('src'); 
+    if (btnSrc === './icons/off.png') {
+        musicBtn.src = './icons/on.png';
+        backMusic.play();
+    }
+    else if (btnSrc === './icons/on.png') {
+        musicBtn.src = './icons/off.png';
+        backMusic.pause()
+    }
+})
 
