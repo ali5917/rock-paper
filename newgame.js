@@ -121,7 +121,7 @@ function game(userChoice) {
             }
             else if (uScore.textContent > cScore.textContent) {
                 audio = document.querySelector('.game-win')
-                resultOverlay.style.backgroundColor='rgba(0, 255, 0, 0.322)';
+                resultOverlay.style.backgroundColor='rgb(5, 133, 5)';
                 resultOverlay.style.visibility = 'visible';
                 gameSection.style.opacity = '0.5';
                 resultPopup.style.visibility = 'visible';
@@ -211,22 +211,25 @@ function checkRestart() {
 
 function later() {
     uScore.textContent = '0';
-        cScore.textContent = '0';
-        roundnum = 1;
-        prompt.textContent = "Select Your Weapon Wisely";
-        finalResult.textContent = "Letsss Go!";
-        userimg.src = usrAvtrSrc;
-        compimg.src = './icons/comp.png';
-        userimg.style.boxShadow ="0 0 15px 3px rgba(228, 228, 127, 0.2)";
-        compimg.style.boxShadow ="0 0 15px 3px rgba(228, 228, 127, 0.2)";
-        resultOverlay.style.visibility = 'hidden';
-        resultPopup.style.visibility = 'hidden';
-        gameSection.style.opacity = '1';
-        
+    cScore.textContent = '0';
+    roundnum = 1;
+    prompt.textContent = "Select Your Weapon Wisely";
+    finalResult.textContent = "Letsss Go!";
+    userimg.src = usrAvtrSrc;
+    compimg.src = './icons/comp.png';
+    userimg.style.boxShadow ="0 0 15px 3px rgba(228, 228, 127, 0.2)";
+    compimg.style.boxShadow ="0 0 15px 3px rgba(228, 228, 127, 0.2)";
+    resultOverlay.style.visibility = 'hidden';
+    resultPopup.style.visibility = 'hidden';
+    gameSection.style.opacity = '1';
 }
 
 function sure() {
-
+    resultOverlay.style.visibility = 'hidden';
+    resultPopup.style.visibility = 'hidden';
+    gameSection.style.opacity = '1';
+    const target = document.getElementById('feed-container');
+    target.scrollIntoView();
 }
 
 submitName.addEventListener('click', () => {
@@ -261,3 +264,21 @@ musicBtn.addEventListener('click', () => {
     }
 })
 
+const revsub = document.querySelector('.revsub-btn');
+revsub.addEventListener('click', () => {
+
+    const revtext = document.querySelector('.rev-text');
+    review = revtext.value;
+    revtext.value = '';
+    const revC = document.querySelector('.rev-c.needed')
+    revC.textContent = review;
+    const revA = document.querySelector('.rev-a.needed')
+    var nameofusr = usrName.value;
+    if (nameofusr === '') {
+        nameofusr = 'Anonymous'
+    }
+    const fullauthorText = `${nameofusr} - Just now`
+    revA.textContent = fullauthorText;
+    const revavr = document.querySelector('.avr.needed');
+    revavr.src = usrAvtrSrc;
+})

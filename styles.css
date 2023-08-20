@@ -370,7 +370,6 @@ body {
     color: white;
     box-shadow: 0 0 10px 5px rgba(228, 228, 127, 0.11);
     visibility: hidden;
-    transition: all ease 0.3s;
 }
 
 .pop-up img {
@@ -404,7 +403,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-size: 22px;
     box-shadow: 0 0 10px 5px rgba(228, 228, 127, 0.2);
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
 .pop-btn button:hover {
@@ -466,7 +465,7 @@ body {
     outline: none;
     border: solid 2px rgb(243, 243, 96);
     box-shadow: 0 0 8px 5px rgb(161, 161, 24);
-    transition: all ease 0.2s;
+    transition: all ease 0.3s;
 }
 
 .revsub-btn {
@@ -492,7 +491,6 @@ body {
     justify-content: center;
     gap: 1em;
     border-bottom: 1px solid white;
-    /* border-top: 1px solid white; */
     padding-top: 10px;
     padding-bottom: 10px;
     width: 800px;
@@ -501,7 +499,7 @@ body {
 .rev img {
     width: 60px;
     height: 60px;
-    border: solid 1px white;
+    border: solid 1px rgb(221, 221, 5);
     border-radius: 50%;
 }
 
