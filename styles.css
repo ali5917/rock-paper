@@ -27,8 +27,8 @@ body {
 }
 
 .nav img {
-    width: 80px;
-    height: 80px;
+    width: 50px;
+    height: 50px;
     transition: all 0.3s ease;
     z-index: 1;
 }
@@ -414,3 +414,110 @@ body {
     transform: scale(1.2);
 }
 
+#feed-container {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(15, 15, 10);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Cinzel', serif;
+    color: white;
+}
+
+#feed-container h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 70px;
+    font-weight: 800;
+    color: white;
+    text-align: center;
+    transition: all ease 0.5s;
+}
+
+#feed-container h1:hover {
+    text-shadow: 0 0 15px rgba(228, 228, 127, 0.8);
+    letter-spacing: 5px;
+}
+
+.rev-input {
+    display: flex;
+    gap: 2em;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+#feed-container input {
+    font-size: 20px;
+    width: 600px;
+    height: 40px;
+    border: 2px solid black;
+    border-radius: 8px;
+    color: rgb(128, 128, 1);
+    border: solid 2px rgb(128, 128, 1);
+    padding: 1px 15px;
+    font-family: 'Cinzel', serif;
+}
+
+#feed-container input:focus {
+    outline: none;
+    border: solid 2px rgb(243, 243, 96);
+    box-shadow: 0 0 8px 5px rgb(161, 161, 24);
+    transition: all ease 0.2s;
+}
+
+.revsub-btn {
+    background: none;
+    border: 2px solid white;
+    padding: 10px 25px;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    box-shadow: 0 0 10px 3px rgba(228, 228, 127, 0.2);
+    transition: all 0.3s ease;
+}
+
+.revsub-btn:hover {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.rev {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    border-bottom: 1px solid white;
+    /* border-top: 1px solid white; */
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 800px;
+}
+
+.rev img {
+    width: 60px;
+    height: 60px;
+    border: solid 1px white;
+    border-radius: 50%;
+}
+
+.rev-right {
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+}
+
+.rev-c {
+    color: white;
+}
+
+.rev-a {
+    color:rgb(221, 221, 5);
+    font-size: 15px;
+}

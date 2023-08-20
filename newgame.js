@@ -219,11 +219,10 @@ function later() {
         compimg.src = './icons/comp.png';
         userimg.style.boxShadow ="0 0 15px 3px rgba(228, 228, 127, 0.2)";
         compimg.style.boxShadow ="0 0 15px 3px rgba(228, 228, 127, 0.2)";
-        tinkAudio.currentTime = 0;
-        tinkAudio.play();
         resultOverlay.style.visibility = 'hidden';
         resultPopup.style.visibility = 'hidden';
         gameSection.style.opacity = '1';
+        
 }
 
 function sure() {
