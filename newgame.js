@@ -13,6 +13,7 @@ const usrAvatars = document.querySelectorAll('.avr-img');
 const uName = document.querySelector('.user-name');
 const whoosh = document.querySelector('.whoosh');
 const musicBtn = document.querySelector('.msc-btn');
+const resultOverlay = document.querySelector('.result-overlay');
 
 //global-variables
 let userChoice;
@@ -110,12 +111,18 @@ function game(userChoice) {
             finalResult.textContent = outcome;
             if (cScore.textContent > uScore.textContent) {
                 audio = document.querySelector('.game-lose')
+                resultOverlay.style.backgroundColor='rgba(255, 0, 0, 0.685)';
+                resultOverlay.style.visibility = 'visible';
             }
             else if (uScore.textContent > cScore.textContent) {
                 audio = document.querySelector('.game-win')
+                resultOverlay.style.backgroundColor='rgba(0, 255, 0, 0.322)';
+                resultOverlay.style.visibility = 'visible';
             }
             else {
-                audio = document.querySelector('.game-draw')
+                audio = document.querySelector('.game-draw');
+                resultOverlay.style.backgroundColor='rgb(15, 15, 10)';
+                resultOverlay.style.visibility = 'visible';
             }
             audio.currentTime = 0;
             audio.play();
@@ -189,6 +196,7 @@ function checkRestart() {
         compimg.style.boxShadow ="0 0 15px 3px rgba(228, 228, 127, 0.2)";
         tinkAudio.currentTime = 0;
         tinkAudio.play();
+        resultOverlay.style.visibility = 'hidden';
     })
 }
 

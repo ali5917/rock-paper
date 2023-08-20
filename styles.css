@@ -23,12 +23,14 @@ body {
     position: fixed;
     top: 10px;
     left: 40px;
+    z-index: 2;
 }
 
 .nav img {
     width: 80px;
     height: 80px;
     transition: all 0.3s ease;
+    z-index: 1;
 }
 
 .nav img:hover {
@@ -83,6 +85,7 @@ body {
 }
 
 #game-container {
+    position: relative;
     background-color: rgb(15, 15, 10);
     width: 100vw;
     height: auto;
@@ -196,6 +199,7 @@ body {
     padding-right: 10px;
     font-family: 'Montserrat', sans-serif;
     transition: all 0.3s ease;
+    z-index: 2;
 }
 
 .restart-btn:hover {
@@ -334,3 +338,13 @@ body {
     border: solid rgb(228, 228, 127) 1px;
 }
 
+.result-overlay {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0.1;
+    z-index: 1;
+    visibility: hidden;
+}
