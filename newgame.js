@@ -227,8 +227,8 @@ function later() {
 }
 
 function sure() {
-    tinkAudio.currentTime = 0;
-    tinkAudio.play();
+    whoosh.currentTime = 0.18;
+    whoosh.play();
     resultOverlay.style.visibility = 'hidden';
     resultPopup.style.visibility = 'hidden';
     gameSection.style.opacity = '1';
