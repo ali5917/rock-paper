@@ -210,6 +210,8 @@ function checkRestart() {
 }
 
 function later() {
+    tinkAudio.currentTime = 0;
+    tinkAudio.play();
     uScore.textContent = '0';
     cScore.textContent = '0';
     roundnum = 1;
@@ -225,6 +227,8 @@ function later() {
 }
 
 function sure() {
+    tinkAudio.currentTime = 0;
+    tinkAudio.play();
     resultOverlay.style.visibility = 'hidden';
     resultPopup.style.visibility = 'hidden';
     gameSection.style.opacity = '1';
