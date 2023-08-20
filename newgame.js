@@ -14,6 +14,8 @@ const uName = document.querySelector('.user-name');
 const whoosh = document.querySelector('.whoosh');
 const musicBtn = document.querySelector('.msc-btn');
 const resultOverlay = document.querySelector('.result-overlay');
+const gameSection = document.querySelector('#game-container');
+const resultPopup = document.querySelector('.pop-up');
 
 //global-variables
 let userChoice;
@@ -106,6 +108,7 @@ function game(userChoice) {
         thisround(userChoice);
         userimg.src = display(userChoice);
         compimg.src = display(compChoice);
+        // After game ends
         if (roundnum > 5) {
             outcome = whowins();
             finalResult.textContent = outcome;
@@ -113,16 +116,22 @@ function game(userChoice) {
                 audio = document.querySelector('.game-lose')
                 resultOverlay.style.backgroundColor='rgba(255, 0, 0, 0.685)';
                 resultOverlay.style.visibility = 'visible';
+                gameSection.style.opacity = '0.5';
+                resultPopup.style.visibility = 'visible';
             }
             else if (uScore.textContent > cScore.textContent) {
                 audio = document.querySelector('.game-win')
                 resultOverlay.style.backgroundColor='rgba(0, 255, 0, 0.322)';
                 resultOverlay.style.visibility = 'visible';
+                gameSection.style.opacity = '0.5';
+                resultPopup.style.visibility = 'visible';
             }
             else {
                 audio = document.querySelector('.game-draw');
                 resultOverlay.style.backgroundColor='rgb(15, 15, 10)';
                 resultOverlay.style.visibility = 'visible';
+                gameSection.style.opacity = '0.5';
+                resultPopup.style.visibility = 'visible';
             }
             audio.currentTime = 0;
             audio.play();
@@ -188,8 +197,8 @@ function checkRestart() {
         uScore.textContent = '0';
         cScore.textContent = '0';
         roundnum = 1;
-        prompt.textContent = "SELECT YOUR WEAPON WISELY";
-        finalResult.textContent = "LETSSSS GO!";
+        prompt.textContent = "Select Your Weapon Wisely";
+        finalResult.textContent = "Letsss Go!";
         userimg.src = usrAvtrSrc;
         compimg.src = './icons/comp.png';
         userimg.style.boxShadow ="0 0 15px 3px rgba(228, 228, 127, 0.2)";
@@ -198,6 +207,27 @@ function checkRestart() {
         tinkAudio.play();
         resultOverlay.style.visibility = 'hidden';
     })
+}
+
+function later() {
+    uScore.textContent = '0';
+        cScore.textContent = '0';
+        roundnum = 1;
+        prompt.textContent = "Select Your Weapon Wisely";
+        finalResult.textContent = "Letsss Go!";
+        userimg.src = usrAvtrSrc;
+        compimg.src = './icons/comp.png';
+        userimg.style.boxShadow ="0 0 15px 3px rgba(228, 228, 127, 0.2)";
+        compimg.style.boxShadow ="0 0 15px 3px rgba(228, 228, 127, 0.2)";
+        tinkAudio.currentTime = 0;
+        tinkAudio.play();
+        resultOverlay.style.visibility = 'hidden';
+        resultPopup.style.visibility = 'hidden';
+        gameSection.style.opacity = '1';
+}
+
+function sure() {
+
 }
 
 submitName.addEventListener('click', () => {

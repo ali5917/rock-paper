@@ -348,3 +348,69 @@ body {
     z-index: 1;
     visibility: hidden;
 }
+
+.pop-up {
+    width: 40%;
+    min-width: 20%;
+    height: 60%;
+    background-color: rgb(17, 17, 6);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border: solid 2px white;
+    border-radius: 6px; 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: fixed;
+    font-family: 'Cinzel', serif;
+    color: white;
+    box-shadow: 0 0 10px 5px rgba(228, 228, 127, 0.11);
+    visibility: hidden;
+    transition: all ease 0.3s;
+}
+
+.pop-up img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 1em;
+}
+
+.pop-up h2 {
+    margin-bottom: 5px;
+    font-size: 30px;
+}
+
+.pop-up p {
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.pop-btn {
+    display: flex;
+    justify-content: center;
+    gap: 5em;
+    margin-top: 15px;
+}
+
+.pop-btn button {
+    border: 2px solid white;
+    padding: 10px 25px;
+    background: none;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+    box-shadow: 0 0 10px 5px rgba(228, 228, 127, 0.2);
+    transition: all 0.3s ease;
+}
+
+.pop-btn button:hover {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
