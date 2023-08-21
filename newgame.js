@@ -287,3 +287,10 @@ revsub.addEventListener('click', () => {
     revavr.src = usrAvtrSrc;
 })
 
+function rickVideo() {
+    window.location.href = "./rick.html";
+}
+
+function backToGame () {
+    window.location.href = "./index.html";
+}

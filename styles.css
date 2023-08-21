@@ -561,3 +561,54 @@ body {
     color:rgb(221, 221, 5);
     font-size: 13px;
 }
+
+.rick-main {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(15, 15, 10);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.rick-main h1 {
+    color: white;
+    font-family: 'Cinzel', serif;
+    font-size: 80px;
+    transition: all ease 0.5s;
+}
+
+.rick-main h1:hover {
+    text-shadow: 0 0 15px rgba(228, 228, 127, 0.8);
+    letter-spacing: 8px;
+}
+
+.rick-main video {
+    width: 50%;
+    padding: none;
+    margin: none;
+    border: solid 2px white;
+}
+
+.back {
+    position: fixed;
+    top: 20px;
+    left: 30px;
+    border: none;
+    background: none;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    padding: 10px 20px;
+    font-size: 13px;
+    border: 2px solid white;
+    box-shadow: 0 0 10px 5px rgba(228, 228, 127, 0.2);
+    transition: all 0.3s ease; 
+}
+
+.back:hover {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    transform: scale(1.2);    
+}
