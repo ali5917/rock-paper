@@ -19,23 +19,64 @@ body {
     color: white;
 }
 
-.nav {
+.nav1 {
     position: fixed;
     top: 10px;
     left: 40px;
     z-index: 2;
 }
 
-.nav img {
+.nav1 img {
     width: 50px;
     height: 50px;
     transition: all 0.3s ease;
     z-index: 1;
 }
 
-.nav img:hover {
+.nav1 img:hover {
     cursor: pointer;
     transform: scale(1.2);
+}
+
+.nav2 {
+    z-index: 2;
+    transition: all ease 0.3s;
+}
+
+.nav2 button{
+    position: fixed;
+    top: 10px;
+    right: 40px;
+    z-index: 2;
+    opacity: 0;
+    border: none;
+    background: none;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    padding: 10px 25px;
+    font-size: 22px;
+    border: 2px solid white;
+    box-shadow: 0 0 10px 5px rgba(228, 228, 127, 0.2);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.nav2 img{
+    position: fixed;
+    top: 10px;
+    right: 40px;
+    z-index: 2;
+    width: 50px;
+    height: 50px;
+    transition: all ease 0.3s;
+}
+
+.nav2:hover img {
+    opacity: 0;
+}
+
+.nav2:hover button {
+    opacity: 1;
 }
 
 .head {
@@ -252,6 +293,7 @@ body {
     border: solid 2px rgb(128, 128, 1);
     padding: 1px 15px;
     font-family: 'Cinzel', serif;
+    text-align: center;
 }
 
 #name-container input:focus {

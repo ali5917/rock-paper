@@ -286,3 +286,4 @@ revsub.addEventListener('click', () => {
     const revavr = document.querySelector('.avr.needed');
     revavr.src = usrAvtrSrc;
 })
+
